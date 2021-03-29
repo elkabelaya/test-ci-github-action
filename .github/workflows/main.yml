@@ -24,10 +24,11 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+        with:
+          node-version: 12
       - name: Ssh agent
         uses: webfactory/ssh-agent@v0.5.1
         with:
-          node-version: 12
           ssh-private-key: ${{secrets.YACLOUD_PRIVATE_KEY}}
       #- run: npm ci
       - run: scp index.html ${{secrets.YACLOUD_SSH_USER}}@${{secrets.YACLOUD_SSH_IP}}
