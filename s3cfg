@@ -1,5 +1,4 @@
 [default]
-access_key = ${ACCESS_KEY}
 access_token =
 add_encoding_exts =
 add_headers =
@@ -60,7 +59,6 @@ reduced_redundancy = False
 requester_pays = False
 restore_days = 1
 restore_priority = Standard
-secret_key = ${SECRET_KEY}
 send_chunk = 65536
 server_side_encryption = False
 signature_v2 = False
