@@ -32,3 +32,4 @@ jobs:
           ssh-private-key: ${{secrets.YACLOUD_PRIVATE_KEY}}
       #- run: npm ci
       - run: scp index.html ${{secrets.YACLOUD_SSH_USER}}@${{secrets.YACLOUD_SSH_IP}}
+      - run: s3cmd from(./) to (s3://zurich/www/)
