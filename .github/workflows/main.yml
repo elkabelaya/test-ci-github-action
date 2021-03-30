@@ -29,3 +29,5 @@ jobs:
             #- run: npm ci
       #- run: scp index.html ${{secrets.YACLOUD_SSH_USER}}@${{secrets.YACLOUD_SSH_IP}}
       - run: s3cmd -c s3cfg --access_key={{secrets.YACLOUD_SA_KEY_IDENTIFIER}} --secret_key={{secrets.YACLOUD_SA_SECRET_KEY}} ls
+
+      
